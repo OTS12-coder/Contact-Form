@@ -1,0 +1,41 @@
+body {
+  background: hsl(148, 38%, 91%);
+  color: hsl(187, 24%, 22%);
+  
+}
+
+.container {
+  background: hsl(0, 0%, 100%);
+}
+.star{
+    color:hsl(169, 82%, 27%);
+}
+
+label {
+  color: hsl(186, 15%, 59%);
+}
+
+input:focus,
+textarea:focus {
+  border-color: hsl(169, 82%, 27%);
+}
+
+button {
+  background: hsl(169, 82%, 27%);
+  color: hsl(0, 0%, 100%);
+}
+
+button:hover {
+  background: hsl(148, 38%, 91%);
+  color:black
+}
+
+.error {
+  color: hsl(0, 66%, 54%);
+}
+.container{
+    padding: 30px;
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}

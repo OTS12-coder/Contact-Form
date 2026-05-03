@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/images/favicon-32x32.png">
+    <title>Contact Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <div class="cform">
+            <form action="">
+                <label for="fname">First Name <span class="star">*</span></label>
+                <input type="text" name="firstname" id="fname" required>
+
+                <label for="lname">Last Name <span class="star">*</span></label>
+                <input type="text" name="lastname" id="lname" required>
+                
+                <label for="email">Email Address <span class="star">*</span></label>
+                <input type="email" name="email" id="email" required>
+
+                <div>
+                    <p>Query Type <span class="star">*</span></p>
+                <input type="radio" name="radio" id="general" value="general" required>
+                    <label for="general">General Enquiry</label>
+                </div> 
+                <div>
+                    <input type="radio" name="radio" id="support" value="support">
+                    <label for="support">Support Request</label>
+
+                </div>
+                
+
+                
+                <label for="message">Message <span class="star">*</span></label>
+                <textarea name="message" id="message" required></textarea>  
+                <input type="checkbox" name="checkbox" id="check" required><label for="check">I Consent to being Contacted By the Team <span class="star">*</span></label>   
+                <button type="submit">Submit</button>          
+            </form>
+        </div>
+
+    </div>
+    
+</body>
+</html>
