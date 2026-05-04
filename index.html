@@ -1,47 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="assets/images/favicon-32x32.png">
-    <title>Contact Form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+  <title>Contact Form</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Contact Us</h1>
-        <div class="cform">
-            <form action="">
-                <label for="fname">First Name <span class="star">*</span></label>
-                <input type="text" name="firstname" id="fname" required>
 
-                <label for="lname">Last Name <span class="star">*</span></label>
-                <input type="text" name="lastname" id="lname" required>
-                
-                <label for="email">Email Address <span class="star">*</span></label>
-                <input type="email" name="email" id="email" required>
+<div class="container">
+  <h1>Contact Us</h1>
 
-                <div>
-                    <p>Query Type <span class="star">*</span></p>
-                <input type="radio" name="radio" id="general" value="general" required>
-                    <label for="general">General Enquiry</label>
-                </div> 
-                <div>
-                    <input type="radio" name="radio" id="support" value="support">
-                    <label for="support">Support Request</label>
+  <form>
 
-                </div>
-                
+    <!-- FIRST + LAST -->
+    <div class="fullname">
 
-                
-                <label for="message">Message <span class="star">*</span></label>
-                <textarea name="message" id="message" required></textarea>  
-                <input type="checkbox" name="checkbox" id="check" required><label for="check">I Consent to being Contacted By the Team <span class="star">*</span></label>   
-                <button type="submit">Submit</button>          
-            </form>
-        </div>
+      <div class="firstname">
+        <label for="fname">First Name <span class="star">*</span></label>
+        <input type="text" id="fname">
+        <p class="error">This field is required</p>
+      </div>
+
+      <div class="lastname">
+        <label for="lname">Last Name <span class="star">*</span></label>
+        <input type="text" id="lname">
+        <p class="error">This field is required</p>
+      </div>
 
     </div>
-    
+
+    <!-- EMAIL -->
+    <label for="email">Email Address <span class="star">*</span></label>
+    <input type="email" id="email">
+    <p class="error">This field is required</p>
+
+    <!-- RADIO -->
+    <p class="label">Query Type <span class="star">*</span></p>
+
+    <div class="query">
+
+      <div class="gen">
+        <input type="radio" name="radio" id="general" value="general">
+        <label for="general">General Enquiry</label>
+      </div>
+
+      <div class="sup">
+        <input type="radio" name="radio" id="support" value="support">
+        <label for="support">Support Request</label>
+      </div>
+
+    </div>
+
+    <p class="error radio-error">Please select a query type</p>
+
+    <!-- MESSAGE -->
+    <label for="message">Message <span class="star">*</span></label>
+    <textarea id="message"></textarea>
+    <p class="error">This field is required</p>
+
+    <!-- CHECKBOX -->
+    <div class="chec">
+      <input type="checkbox" id="check">
+      <label for="check">I Consent to being Contacted By the Team <span class="star">*</span></label>
+    </div>
+    <p class="error">To submit this form, please consent...</p>
+
+    <!-- BUTTON -->
+    <button type="submit">Submit</button>
+
+  </form>
+</div>
+
+<script src="script.js"></script>
+
+<div class="success-popup" id="popup">
+  <div class="popup-content">
+    <h2>Message Sent!</h2>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+</div>
+
 </body>
 </html>
